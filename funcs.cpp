@@ -5,6 +5,8 @@ SymbString symb;
 BinString bins;
 string sym, bin;
 
+SetConsoleOutputCP(1251);
+
 int menu(const char* menu_items[])
 {
 	int n;
@@ -57,49 +59,49 @@ int tab_handler8(void* p) {
 }
 
 int create_symb() {
-	cout << "Ââåäèòå çíà÷åíèå: " << endl;
+	cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã§Ã­Ã Ã·Ã¥Ã­Ã¨Ã¥: " << endl;
 	cin >> sym;
 	symb = SymbString(sym);
-	cout << "Îáúåêò ñîçäàí: " << sym << endl;
+	cout << "ÃŽÃ¡ÃºÃ¥ÃªÃ² Ã±Ã®Ã§Ã¤Ã Ã­: " << sym << endl;
 	return 0;
 }
 
 int create_bin() {
-	cout << "Ââåäèòå çíà÷åíèå: " << endl;
+	cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã§Ã­Ã Ã·Ã¥Ã­Ã¨Ã¥: " << endl;
 	cin >> bin;
 	bins = BinString(bin);
 	char a[30];
 	_itoa(atoi(bin.c_str()), a, 2);
-	cout << "Îáúåêò ñîçäàí: " << atoi(a) << endl;
+	cout << "ÃŽÃ¡ÃºÃ¥ÃªÃ² Ã±Ã®Ã§Ã¤Ã Ã­: " << atoi(a) << endl;
 	return 0;
 }
 
 int del_symb() {
 	cout << endl << endl;
 	symb = SymbString("");
-	cout << "Îáúåêò óäàëåí." << endl;
+	cout << "ÃŽÃ¡ÃºÃ¥ÃªÃ² Ã³Ã¤Ã Ã«Ã¥Ã­." << endl;
 	return 0;
 }
 
 int del_bin() {
 	cout << endl << endl;
 	bins = BinString("");
-	cout << "Îáúåêò óäàëåí." << endl;
+	cout << "ÃŽÃ¡ÃºÃ¥ÃªÃ² Ã³Ã¤Ã Ã«Ã¥Ã­." << endl;
 	return 0;
 }
 
 int show_oct() {
-	cout << "Âîñüìèðè÷íîå ïðåäñòàâëåíèå:" << bins.ShowOct() << endl;
+	cout << "Ã‚Ã®Ã±Ã¼Ã¬Ã¨Ã°Ã¨Ã·Ã­Ã®Ã¥ Ã¯Ã°Ã¥Ã¤Ã±Ã²Ã Ã¢Ã«Ã¥Ã­Ã¨Ã¥:" << bins.ShowOct() << endl;
 	return 0;
 }
 
 int show_dec() {
-	cout << "Äåñÿòè÷íîå ïðåäñòàâëåíèå: " << bins.ShowDec() << endl;
+	cout << "Ã„Ã¥Ã±Ã¿Ã²Ã¨Ã·Ã­Ã®Ã¥ Ã¯Ã°Ã¥Ã¤Ã±Ã²Ã Ã¢Ã«Ã¥Ã­Ã¨Ã¥: " << bins.ShowDec() << endl;
 	return 0;
 }
 
 int show_hex() {
-	cout << "Øåñíàäöàòèðè÷íîå ïðåäñòàâëåíèå: " << bins.ShowHex() << endl;
+	cout << "Ã˜Ã¥Ã±Ã­Ã Ã¤Ã¶Ã Ã²Ã¨Ã°Ã¨Ã·Ã­Ã®Ã¥ Ã¯Ã°Ã¥Ã¤Ã±Ã²Ã Ã¢Ã«Ã¥Ã­Ã¨Ã¥: " << bins.ShowHex() << endl;
 	return 0;
 }
 
