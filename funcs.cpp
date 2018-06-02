@@ -5,8 +5,6 @@ SymbString symb;
 BinString bins;
 string sym, bin;
 
-SetConsoleOutputCP(1251);
-
 int menu(const char* menu_items[])
 {
 	int n;
@@ -59,49 +57,49 @@ int tab_handler8(void* p) {
 }
 
 int create_symb() {
-	cout << "Ââåäèòå çíà÷åíèå: " << endl;
+	cout << "Введите значение: " << endl;
 	cin >> sym;
 	symb = SymbString(sym);
-	cout << "Îáúåêò ñîçäàí: " << sym << endl;
+	cout << "Объект создан: " << sym << endl;
 	return 0;
 }
 
 int create_bin() {
-	cout << "Ââåäèòå çíà÷åíèå: " << endl;
+	cout << "Введите значение: " << endl;
 	cin >> bin;
 	bins = BinString(bin);
 	char a[30];
 	_itoa(atoi(bin.c_str()), a, 2);
-	cout << "Îáúåêò ñîçäàí: " << atoi(a) << endl;
+	cout << "Объект создан: " << atoi(a) << endl;
 	return 0;
 }
 
 int del_symb() {
 	cout << endl << endl;
 	symb = SymbString("");
-	cout << "Îáúåêò óäàëåí." << endl;
+	cout << "Объект удален." << endl;
 	return 0;
 }
 
 int del_bin() {
 	cout << endl << endl;
 	bins = BinString("");
-	cout << "Îáúåêò óäàëåí." << endl;
+	cout << "Объект удален." << endl;
 	return 0;
 }
 
 int show_oct() {
-	cout << "Âîñüìèðè÷íîå ïðåäñòàâëåíèå:" << bins.ShowOct() << endl;
+	cout << "Восьмиричное представление:" << bins.ShowOct() << endl;
 	return 0;
 }
 
 int show_dec() {
-	cout << "Äåñÿòè÷íîå ïðåäñòàâëåíèå: " << bins.ShowDec() << endl;
+	cout << "Десятичное представление: " << bins.ShowDec() << endl;
 	return 0;
 }
 
 int show_hex() {
-	cout << "Øåñíàäöàòèðè÷íîå ïðåäñòàâëåíèå: " << bins.ShowHex() << endl;
+	cout << "Шеснадцатиричное представление: " << bins.ShowHex() << endl;
 	return 0;
 }
 
